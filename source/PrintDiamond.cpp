@@ -1,10 +1,5 @@
 #include "PrintDiamond.h"
 
-int answer()
-{
-	return 6 * 9;
-}
-
 void PrintDiamondClass::InitArray()
 {
 	m_alphabet = { { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 

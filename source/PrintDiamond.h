@@ -5,8 +5,6 @@
 #include<vector>
 #include<iostream>
 
-int answer();
-
 class PrintDiamondClass
 {
 	public:

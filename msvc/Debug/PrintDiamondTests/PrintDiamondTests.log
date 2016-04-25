@@ -1,4 +1,4 @@
-﻿Build started 18/04/2016 09:35:20 AM.
+﻿Build started 25/04/2016 02:18:04 PM.
      1>Project "C:\CallumProjects\PrintDiamond\msvc\PrintDiamondTests.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\PrintDiamondTests\\" /Fd"Debug\PrintDiamondTests\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\tests\tests.PrintDiamond.cpp
@@ -13,4 +13,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.02
+Time Elapsed 00:00:02.38
