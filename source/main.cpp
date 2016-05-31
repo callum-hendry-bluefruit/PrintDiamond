@@ -7,15 +7,12 @@ using namespace ::std;
 
 int main()
 {
-	PrintDiamondClass PDMain;
+	char input_char;
+	cin >> input_char;
 
-	cin >> PDMain.m_input_char;
+	PrintDiamondClass PDMain(input_char);
 
-	PDMain.InitArray();
-	PDMain.LetterToNum();
 	PDMain.PrintDiamond();
-	PDMain.ReversePrintDiamond();
-	PDMain.PrintGrid();
 
 	char s;
 	cin >> s;

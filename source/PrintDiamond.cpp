@@ -1,14 +1,10 @@
 #include "PrintDiamond.h"
 
-int answer()
+PrintDiamondClass::PrintDiamondClass(char input_char)
+	:m_input_char(input_char)
 {
-	return 6 * 9;
-}
-
-void PrintDiamondClass::InitArray()
-{
-	m_alphabet = { { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 
-					 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' } };
+	m_alphabet = { { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+		'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' } };
 	for (int i = 0; i <= 25; i++)
 	{
 		m_numbers[i] = i + 1;
@@ -37,6 +33,8 @@ void PrintDiamondClass::LetterToNum()
 
 void PrintDiamondClass::PrintDiamond()
 {
+	LetterToNum();
+
 	for (int i = 0; i < m_loop_control; i++)
 	{
 		if (i == 0)
@@ -49,6 +47,8 @@ void PrintDiamondClass::PrintDiamond()
 			m_diamond_grid[i][(25 + i)] = m_alphabet[i];
 		}
 	}
+
+	ReversePrintDiamond();
 }
 
 void PrintDiamondClass::ReversePrintDiamond()
@@ -68,19 +68,46 @@ void PrintDiamondClass::ReversePrintDiamond()
 			m_diamond_grid[(m_loop_control + (i - 1))][(25 + column_positioning)] = m_alphabet[column_positioning];
 		}
 	}
+
+	PrintGrid();
 }
 
 void PrintDiamondClass::PrintGrid()
 {
+	bool break_out = false;
 	for (int i = 0; i <= 51; i++)
 	{
 		for (int i2 = 0; i2 <= 51; i2++)
 		{
 			std::cout << m_diamond_grid[i][i2] << " ";
+			if (i == 0)
+			{
+
+			}
+			else
+			{
+				if (m_diamond_grid[i][i2] == 'A')
+				{
+					break_out = true;
+				}
+			}
+
+			if (break_out == true)
+			{
+				break;
+			}
 		}
 
 		std::cout << "\n";
-	}
 
-	std::cout << m_loop_control;
+		if (break_out == true)
+		{
+			break;
+		}
+	}
+}
+
+char PrintDiamondClass::GetGridValue(int x_coord, int y_coord)
+{
+	return m_diamond_grid[x_coord][y_coord];
 }
