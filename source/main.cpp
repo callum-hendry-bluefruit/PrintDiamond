@@ -1,3 +1,5 @@
+#include "PrintDiamond.h"
+
 #include <iostream>
 #include <string>
 
@@ -5,10 +7,18 @@ using namespace ::std;
 
 int main()
 {
-	string s;
+	PrintDiamondClass PDMain;
 
-	cout << "Hello World!";
+	cin >> PDMain.m_input_char;
 
+	PDMain.InitArray();
+	PDMain.LetterToNum();
+	PDMain.PrintDiamond();
+	PDMain.ReversePrintDiamond();
+	PDMain.PrintGrid();
+
+	char s;
 	cin >> s;
+
 	return 0;
 }
